@@ -78,26 +78,26 @@
     "shard": null,
     "updateSnapshots": "missing",
     "version": "1.45.0",
-    "workers": 8,
+    "workers": 1,
     "webServer": null
   },
   "suites": [
     {
-      "title": "example.spec.js",
-      "file": "example.spec.js",
+      "title": "weather.spec.js",
+      "file": "weather.spec.js",
       "column": 0,
       "line": 0,
       "specs": [],
       "suites": [
         {
-          "title": "suite",
-          "file": "example.spec.js",
-          "line": 48,
+          "title": "Weather Website",
+          "file": "weather.spec.js",
+          "line": 4,
           "column": 6,
           "specs": [
             {
-              "title": "basic test",
-              "ok": true,
+              "title": "Das",
+              "ok": false,
               "tags": [],
               "tests": [
                 {
@@ -108,47 +108,50 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "status": "interrupted",
-                      "duration": 2750980,
+                      "workerIndex": 20,
+                      "status": "failed",
+                      "duration": 352776,
                       "error": {
-                        "message": "Error: page.waitForSelector: Test ended.\nCall log:\n  \u001b[2m- waiting for locator('.CurrentConditions--CurrentConditions--1XEyg') to be visible\u001b[22m\n",
-                        "stack": "Error: page.waitForSelector: Test ended.\nCall log:\n  \u001b[2m- waiting for locator('.CurrentConditions--CurrentConditions--1XEyg') to be visible\u001b[22m\n\n    at d:\\Projects\\playWright\\tests\\example.spec.js:62:16",
+                        "message": "Error: page.evaluate: TypeError: Cannot read properties of null (reading 'innerText')\n    at eval (eval at evaluate (:226:30), <anonymous>:4:78)\n    at NodeList.forEach (<anonymous>)\n    at eval (eval at evaluate (:226:30), <anonymous>:3:65)\n    at UtilityScript.evaluate (<anonymous>:228:17)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+                        "stack": "Error: page.evaluate: TypeError: Cannot read properties of null (reading 'innerText')\n    at eval (eval at evaluate (:226:30), <anonymous>:4:78)\n    at NodeList.forEach (<anonymous>)\n    at eval (eval at evaluate (:226:30), <anonymous>:3:65)\n    at UtilityScript.evaluate (<anonymous>:228:17)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at eval (d:\\Projects\\playWright\\eval at evaluate (:226:30), <anonymous>:4:78)\n    at eval (d:\\Projects\\playWright\\eval at evaluate (:226:30), <anonymous>:3:65)\n    at UtilityScript.evaluate (d:\\Projects\\playWright\\<anonymous>:228:17)\n    at UtilityScript.<anonymous> (d:\\Projects\\playWright\\<anonymous>:1:44)\n    at d:\\Projects\\playWright\\tests\\weather.spec.js:93:38",
                         "location": {
-                          "file": "d:\\Projects\\playWright\\tests\\example.spec.js",
-                          "column": 16,
-                          "line": 62
-                        },
-                        "snippet": "\u001b[0m \u001b[90m 60 |\u001b[39m   \u001b[90m// Verify the Results Using Assertions\u001b[39m\n \u001b[90m 61 |\u001b[39m   \u001b[36mconst\u001b[39m location \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39m$eval(\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 62 |\u001b[39m     \u001b[32m\".CurrentConditions--location--1Ayv3\"\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 63 |\u001b[39m     (el) \u001b[33m=>\u001b[39m el\u001b[33m.\u001b[39mtextContent\n \u001b[90m 64 |\u001b[39m   )\u001b[33m;\u001b[39m\n \u001b[90m 65 |\u001b[39m   expect(location)\u001b[33m.\u001b[39mtoContain(\u001b[32m\"New York\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                          "file": "d:\\Projects\\playWright\\eval at evaluate (:226:30), <anonymous>",
+                          "column": 78,
+                          "line": 4
+                        }
                       },
                       "errors": [
                         {
                           "location": {
-                            "file": "d:\\Projects\\playWright\\tests\\example.spec.js",
-                            "column": 16,
-                            "line": 62
+                            "file": "d:\\Projects\\playWright\\eval at evaluate (:226:30), <anonymous>",
+                            "column": 78,
+                            "line": 4
                           },
-                          "message": "Error: page.waitForSelector: Test ended.\nCall log:\n  \u001b[2m- waiting for locator('.CurrentConditions--CurrentConditions--1XEyg') to be visible\u001b[22m\n\n\n\u001b[0m \u001b[90m 60 |\u001b[39m   \u001b[90m// Verify the Results Using Assertions\u001b[39m\n \u001b[90m 61 |\u001b[39m   \u001b[36mconst\u001b[39m location \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39m$eval(\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 62 |\u001b[39m     \u001b[32m\".CurrentConditions--location--1Ayv3\"\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 63 |\u001b[39m     (el) \u001b[33m=>\u001b[39m el\u001b[33m.\u001b[39mtextContent\n \u001b[90m 64 |\u001b[39m   )\u001b[33m;\u001b[39m\n \u001b[90m 65 |\u001b[39m   expect(location)\u001b[33m.\u001b[39mtoContain(\u001b[32m\"New York\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\n\u001b[2m    at d:\\Projects\\playWright\\tests\\example.spec.js:62:16\u001b[22m"
+                          "message": "Error: page.evaluate: TypeError: Cannot read properties of null (reading 'innerText')\n\n\u001b[2m    at eval (eval at evaluate (:226:30), <anonymous>:4:78)\u001b[22m\n\u001b[2m    at NodeList.forEach (<anonymous>)\u001b[22m\n\u001b[2m    at eval (eval at evaluate (:226:30), <anonymous>:3:65)\u001b[22m\n\u001b[2m    at UtilityScript.evaluate (<anonymous>:228:17)\u001b[22m\n\u001b[2m    at UtilityScript.<anonymous> (<anonymous>:1:44)\u001b[22m\n\u001b[2m    at eval (d:\\Projects\\playWright\\eval at evaluate (:226:30), <anonymous>:4:78)\u001b[22m\n\u001b[2m    at eval (d:\\Projects\\playWright\\eval at evaluate (:226:30), <anonymous>:3:65)\u001b[22m\n\u001b[2m    at UtilityScript.evaluate (d:\\Projects\\playWright\\<anonymous>:228:17)\u001b[22m\n\u001b[2m    at UtilityScript.<anonymous> (d:\\Projects\\playWright\\<anonymous>:1:44)\u001b[22m\n\u001b[2m    at d:\\Projects\\playWright\\tests\\weather.spec.js:93:38\u001b[22m"
                         }
                       ],
-                      "stdout": [],
+                      "stdout": [
+                        {
+                          "text": "location:Addis Ababa - Weather warnings issued\nTemperature: 13°\nstatus:Low\n"
+                        }
+                      ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2024-07-02T01:40:48.474Z",
+                      "startTime": "2024-07-02T15:41:15.259Z",
                       "attachments": [],
                       "errorLocation": {
-                        "file": "d:\\Projects\\playWright\\tests\\example.spec.js",
-                        "column": 16,
-                        "line": 62
+                        "file": "d:\\Projects\\playWright\\eval at evaluate (:226:30), <anonymous>",
+                        "column": 78,
+                        "line": 4
                       }
                     }
                   ],
-                  "status": "skipped"
+                  "status": "unexpected"
                 }
               ],
-              "id": "dd9b2edffe9b7501040c-6fc241e1e366e39ce014",
-              "file": "example.spec.js",
-              "line": 53,
+              "id": "a4cab4fad654d5e69a8f-8fd34557ea58a516042e",
+              "file": "weather.spec.js",
+              "line": 34,
               "column": 3
             }
           ]
@@ -158,11 +161,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-07-02T01:40:46.857Z",
-    "duration": 2752997.87,
+    "startTime": "2024-07-02T15:41:13.612Z",
+    "duration": 354940.2110000029,
     "expected": 0,
-    "skipped": 1,
-    "unexpected": 0,
+    "skipped": 0,
+    "unexpected": 1,
     "flaky": 0
   }
 }
