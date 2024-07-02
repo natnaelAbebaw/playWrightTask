@@ -1,0 +1,168 @@
+{
+  "config": {
+    "configFile": "d:\\Projects\\playWright\\playwright.config.js",
+    "rootDir": "d:/Projects/playWright/tests",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 15000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "d:/Projects/playWright/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "d:/Projects/playWright/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 300000000
+      },
+      {
+        "outputDir": "d:/Projects/playWright/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "d:/Projects/playWright/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 300000000
+      },
+      {
+        "outputDir": "d:/Projects/playWright/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "d:/Projects/playWright/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 300000000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "version": "1.45.0",
+    "workers": 8,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "example.spec.js",
+      "file": "example.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "suite",
+          "file": "example.spec.js",
+          "line": 48,
+          "column": 6,
+          "specs": [
+            {
+              "title": "basic test",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 300000000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "interrupted",
+                      "duration": 2750980,
+                      "error": {
+                        "message": "Error: page.waitForSelector: Test ended.\nCall log:\n  \u001b[2m- waiting for locator('.CurrentConditions--CurrentConditions--1XEyg') to be visible\u001b[22m\n",
+                        "stack": "Error: page.waitForSelector: Test ended.\nCall log:\n  \u001b[2m- waiting for locator('.CurrentConditions--CurrentConditions--1XEyg') to be visible\u001b[22m\n\n    at d:\\Projects\\playWright\\tests\\example.spec.js:62:16",
+                        "location": {
+                          "file": "d:\\Projects\\playWright\\tests\\example.spec.js",
+                          "column": 16,
+                          "line": 62
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 60 |\u001b[39m   \u001b[90m// Verify the Results Using Assertions\u001b[39m\n \u001b[90m 61 |\u001b[39m   \u001b[36mconst\u001b[39m location \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39m$eval(\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 62 |\u001b[39m     \u001b[32m\".CurrentConditions--location--1Ayv3\"\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 63 |\u001b[39m     (el) \u001b[33m=>\u001b[39m el\u001b[33m.\u001b[39mtextContent\n \u001b[90m 64 |\u001b[39m   )\u001b[33m;\u001b[39m\n \u001b[90m 65 |\u001b[39m   expect(location)\u001b[33m.\u001b[39mtoContain(\u001b[32m\"New York\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "d:\\Projects\\playWright\\tests\\example.spec.js",
+                            "column": 16,
+                            "line": 62
+                          },
+                          "message": "Error: page.waitForSelector: Test ended.\nCall log:\n  \u001b[2m- waiting for locator('.CurrentConditions--CurrentConditions--1XEyg') to be visible\u001b[22m\n\n\n\u001b[0m \u001b[90m 60 |\u001b[39m   \u001b[90m// Verify the Results Using Assertions\u001b[39m\n \u001b[90m 61 |\u001b[39m   \u001b[36mconst\u001b[39m location \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39m$eval(\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 62 |\u001b[39m     \u001b[32m\".CurrentConditions--location--1Ayv3\"\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 63 |\u001b[39m     (el) \u001b[33m=>\u001b[39m el\u001b[33m.\u001b[39mtextContent\n \u001b[90m 64 |\u001b[39m   )\u001b[33m;\u001b[39m\n \u001b[90m 65 |\u001b[39m   expect(location)\u001b[33m.\u001b[39mtoContain(\u001b[32m\"New York\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\n\u001b[2m    at d:\\Projects\\playWright\\tests\\example.spec.js:62:16\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2024-07-02T01:40:48.474Z",
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "d:\\Projects\\playWright\\tests\\example.spec.js",
+                        "column": 16,
+                        "line": 62
+                      }
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "dd9b2edffe9b7501040c-6fc241e1e366e39ce014",
+              "file": "example.spec.js",
+              "line": 53,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2024-07-02T01:40:46.857Z",
+    "duration": 2752997.87,
+    "expected": 0,
+    "skipped": 1,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}
